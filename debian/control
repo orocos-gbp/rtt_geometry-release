@@ -1,0 +1,12 @@
+Source: ros-hydro-kdl-typekit
+Section: misc
+Priority: extra
+Maintainer: Orocos Developers <orocos-dev@lists.mech.kuleuven.be>
+Build-Depends: debhelper (>= 7.0.50~), ros-hydro-catkin, ros-hydro-ocl, ros-hydro-orocos-kdl, ros-hydro-rtt
+Homepage: http://ros.org/wiki/kdl_typekit
+Standards-Version: 3.9.2
+
+Package: ros-hydro-kdl-typekit
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-hydro-ocl, ros-hydro-orocos-kdl, ros-hydro-rtt
+Description: This package contains the KDL RTT bindings
