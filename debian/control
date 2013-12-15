@@ -1,0 +1,12 @@
+Source: ros-hydro-kdl-lua
+Section: misc
+Priority: extra
+Maintainer: Nick Vanthienen <first.last@mech.kuleuven.be>
+Build-Depends: debhelper (>= 7.0.50~), ros-hydro-catkin, ros-hydro-kdl-typekit, ros-hydro-ocl, ros-hydro-rtt-kdl-conversions
+Homepage: http://www.orocos.org/wiki/orocos/toolchain/orocostoolchainluacookbook#toc52
+Standards-Version: 3.9.2
+
+Package: ros-hydro-kdl-lua
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-hydro-kdl-typekit, ros-hydro-ocl, ros-hydro-rtt-kdl-conversions
+Description: kdl_lua, contains the kdl pretty printing lua module kdlpp.lua
