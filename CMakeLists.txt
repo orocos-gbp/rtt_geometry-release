@@ -1,9 +1,6 @@
-# http://ros.org/doc/groovy/api/catkin/html/user_guide/supposed.html
 cmake_minimum_required(VERSION 2.8.3)
 
 project(kdl_typekit)
-
-find_package(catkin)
 
 # Defines the orocos_* cmake macros. See that file for additional
 # documentation.
@@ -40,12 +37,25 @@ orocos_typekit(${PROJECT_NAME}
 
 target_link_libraries(${PROJECT_NAME} ${orocos_kdl_LIBRARIES})
 
+add_subdirectory(src/corba)
+
 if(CATKIN_ENABLE_TESTING)
   add_subdirectory(test)
 endif()
-add_subdirectory(src/corba)
+
+file(GLOB LUA_FILES "lua/*.lua")
+set(LUA_DESTINATION share)
+if(catkin_FOUND)
+  catkin_add_env_hooks(10.${PROJECT_NAME} SHELLS sh DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/env-hooks)
+  set(LUA_DESTINATION ${CATKIN_GLOBAL_SHARE_DESTINATION})
+endif()
+
+install(
+  FILES ${LUA_FILES}
+  DESTINATION ${LUA_DESTINATION}/lua/5.1/${PROJECT_NAME}/
+)
+
 
 orocos_generate_package(
-  DEPENDS orocos_kdl
-  DEPENDS_TARGETS rtt_roscomm rtt_std_msgs
+  DEPENDS orocos-kdl
 )
