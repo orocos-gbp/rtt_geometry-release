@@ -1,0 +1,12 @@
+Source: ros-hydro-rtt-geometry
+Section: misc
+Priority: extra
+Maintainer: Orocos Developers <orocos-dev@lists.mech.kuleuven.be>
+Build-Depends: debhelper (>= 7.0.50~), ros-hydro-catkin
+Homepage: http://www.orocos.org/
+Standards-Version: 3.9.2
+
+Package: ros-hydro-rtt-geometry
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-hydro-eigen-typekit, ros-hydro-kdl-typekit
+Description: This metapackage contains tools for integrating the Orocos Kinematics and Dynamics Library (KDL) with the Orocos Toolchain and Real-Time Toolkit (RTT).
