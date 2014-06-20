@@ -1,3 +1,25 @@
+## rtt_geometry (hydro) - 2.7.0-2
+
+The packages in the `rtt_geometry` repository were released into the `hydro` distro by running `/usr/bin/bloom-release --track hydro --rosdistro hydro rtt_geometry --edit` on `Fri, 20 Jun 2014 14:19:24 -0000`
+
+These packages were released:
+- `eigen_typekit`
+- `kdl_typekit`
+- `rtt_geometry`
+
+Version of package(s) in repository `rtt_geometry`:
+- rosdistro version: `2.7.0-1`
+- old version: `2.7.0-1`
+- new version: `2.7.0-2`
+
+Versions of tools used:
+- bloom version: `0.5.10`
+- catkin_pkg version: `0.2.2`
+- rosdep version: `0.10.27`
+- rosdistro version: `0.3.5`
+- vcstools version: `0.1.35`
+
+
 ## rtt_geometry (hydro) - 2.7.0-1
 
 User `meyer@fliegtfix` released the packages in the `rtt_geometry` repository into the `hydro` distro by running `/usr/bin/bloom-release --track hydro --ros-distro hydro rtt_geometry` on `Thu, 27 Mar 2014 07:27:43 -0000`
