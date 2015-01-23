@@ -1,3 +1,27 @@
+## rtt_geometry (indigo) - 2.8.0-0
+
+The packages in the `rtt_geometry` repository were released into the `indigo` distro by running `/usr/bin/bloom-release rtt_geometry --track indigo -e -r indigo` on `Fri, 23 Jan 2015 16:50:23 -0000`
+
+These packages were released:
+- `eigen_typekit`
+- `kdl_typekit`
+- `rtt_geometry`
+
+Version of package(s) in repository `rtt_geometry`:
+- upstream repository: https://github.com/orocos/rtt_geometry.git
+- release repository: https://github.com/orocos-gbp/rtt_geometry-release.git
+- rosdistro version: `null`
+- old version: `null`
+- new version: `2.8.0-0`
+
+Versions of tools used:
+- bloom version: `0.5.16`
+- catkin_pkg version: `0.2.6`
+- rosdep version: `0.11.0`
+- rosdistro version: `0.4.0`
+- vcstools version: `0.1.36`
+
+
 ## rtt_geometry (hydro) - 2.7.0-2
 
 The packages in the `rtt_geometry` repository were released into the `hydro` distro by running `/usr/bin/bloom-release --track hydro --rosdistro hydro rtt_geometry --edit` on `Fri, 20 Jun 2014 14:19:24 -0000`
