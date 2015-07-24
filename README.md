@@ -1,3 +1,27 @@
+## rtt_geometry (jade) - 2.8.1-0
+
+The packages in the `rtt_geometry` repository were released into the `jade` distro by running `/usr/bin/bloom-release rtt_geometry --track jade --ros-distro jade --new` on `Fri, 24 Jul 2015 12:05:18 -0000`
+
+These packages were released:
+- `eigen_typekit`
+- `kdl_typekit`
+- `rtt_geometry`
+
+Version of package(s) in repository `rtt_geometry`:
+- upstream repository: https://github.com/orocos/rtt_geometry.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `2.8.1-0`
+
+Versions of tools used:
+- bloom version: `0.5.20`
+- catkin_pkg version: `0.2.8`
+- rosdep version: `0.11.2`
+- rosdistro version: `0.4.2`
+- vcstools version: `0.1.36`
+
+
 ## rtt_geometry (indigo) - 2.8.1-0
 
 The packages in the `rtt_geometry` repository were released into the `indigo` distro by running `/usr/bin/bloom-release -t indigo -r indigo rtt_geometry` on `Tue, 21 Jul 2015 12:13:32 -0000`
