@@ -1,0 +1,12 @@
+Source: ros-jade-rtt-geometry
+Section: misc
+Priority: extra
+Maintainer: Orocos Developers <orocos-dev@lists.mech.kuleuven.be>
+Build-Depends: debhelper (>= 9.0.0), ros-jade-catkin
+Homepage: http://www.orocos.org/
+Standards-Version: 3.9.2
+
+Package: ros-jade-rtt-geometry
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-jade-eigen-typekit, ros-jade-kdl-typekit
+Description: This metapackage contains tools for integrating the Orocos Kinematics and Dynamics Library (KDL) with the Orocos Toolchain and Real-Time Toolkit (RTT).
