@@ -44,13 +44,15 @@
 #ifndef ORO_KDL_TYPEKIT_HPP
 #define ORO_KDL_TYPEKIT_HPP
 
-#include "kdlTypekitTypes.hpp"
+#include <kdl_typekit/typekit/Types.hpp>
 #include <rtt/types/TypekitPlugin.hpp>
 #include <kdl/frames.hpp>
 #include <rtt/types/Types.hpp>
 #include <rtt/types/TemplateTypeInfo.hpp>
 #include <rtt/types/SequenceTypeInfo.hpp>
 #include <rtt/types/StructTypeInfo.hpp>
+#include <rtt/types/carray.hpp>
+#include <rtt/types/CArrayTypeInfo.hpp>
 #include <rtt/types/Operators.hpp>
 #include <rtt/types/OperatorTypes.hpp>
 #include <rtt/internal/mystd.hpp>
@@ -86,7 +88,7 @@ namespace KDL
       if (index >= size || index < 0)
           return internal::NA<double&>::na();
       return cont[index];
-  };
+  }
 
   /**
    * Returns a copy to one item in an STL container.
@@ -101,7 +103,7 @@ namespace KDL
       if (index >= size || index < 0)
           return internal::NA<double>::na();
       return cont[index];
-  };
+  }
 
   /**
    * KDL RTT bindings
@@ -157,24 +159,24 @@ namespace KDL
   };
 
   /**
-     * Template class used for Frame, Rotation
-     */
-    template<class KDLType>
-    struct KDLTypeInfo
-      : public StructTypeInfo<KDLType,true>
-    {
-      KDLTypeInfo(std::string name) : StructTypeInfo<KDLType,true>(name) {}
+   * Template class used for Frame, Rotation
+   */
+  template<class KDLType>
+  struct KDLTypeInfo
+    : public StructTypeInfo<KDLType,true>
+  {
+    KDLTypeInfo(std::string name) : StructTypeInfo<KDLType,true>(name) {}
 
-      virtual bool decomposeTypeImpl(const KDLType& source, PropertyBag& targetbag ) const {
-        decomposeProperty( source, targetbag );
-        return true;
-      }
+    virtual bool decomposeTypeImpl(const KDLType& source, PropertyBag& targetbag ) const {
+      decomposeProperty( source, targetbag );
+      return true;
+    }
 
-      virtual bool composeTypeImpl(const PropertyBag& source, KDLType& result) const {
-        return composeProperty( source, result );
-      }
+    virtual bool composeTypeImpl(const PropertyBag& source, KDLType& result) const {
+      return composeProperty( source, result );
+    }
 
-    };
+  };
 
   /**
    * The single global instance of the KDL Typekit.
