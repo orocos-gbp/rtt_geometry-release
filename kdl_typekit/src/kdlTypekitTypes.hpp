@@ -441,6 +441,21 @@ namespace boost
     extern template class RTT::Attribute< std::vector<KDL::Rotation> >;
 #endif
 
+
+namespace boost
+{
+    namespace serialization
+    {
+        template<typename Archive>
+        void serialize(Archive& a, std::vector<KDL::Rotation>& b, unsigned int version)
+        {
+            using boost::serialization::make_nvp;
+            for(unsigned int i=0; i < b.size(); i++){
+              boost::serialization::serialize(a, b[i], version);
+            }
+        }
+    }
+}
 #ifdef CORELIB_DATASOURCE_HPP
     extern template class RTT::internal::DataSource< std::vector<KDL::Vector> >;
     extern template class RTT::internal::AssignableDataSource< std::vector<KDL::Vector> >;
@@ -466,6 +481,22 @@ namespace boost
     extern template class RTT::Attribute< std::vector<KDL::Vector> >;
 #endif
 
+
+namespace boost
+{
+    namespace serialization
+    {
+        template<typename Archive>
+        void serialize(Archive& a, std::vector<KDL::Vector>& b, unsigned int version)
+        {
+            using boost::serialization::make_nvp;
+            for(unsigned int i=0; i < b.size(); i++){
+              boost::serialization::serialize(a, b[i], version);
+
+            }
+        }
+    }
+}
 #ifdef CORELIB_DATASOURCE_HPP
     extern template class RTT::internal::DataSource< std::vector<KDL::Frame> >;
     extern template class RTT::internal::AssignableDataSource< std::vector<KDL::Frame> >;
@@ -491,6 +522,22 @@ namespace boost
     extern template class RTT::Attribute< std::vector<KDL::Frame> >;
 #endif
 
+
+namespace boost
+{
+    namespace serialization
+    {
+        template<typename Archive>
+        void serialize(Archive& a, std::vector<KDL::Frame>& b, unsigned int version)
+        {
+            using boost::serialization::make_nvp;
+            for(unsigned int i=0; i < b.size(); i++){
+              boost::serialization::serialize(a, b[i], version);
+
+            }
+        }
+    }
+}
 #ifdef CORELIB_DATASOURCE_HPP
     extern template class RTT::internal::DataSource< std::vector<KDL::Twist> >;
     extern template class RTT::internal::AssignableDataSource< std::vector<KDL::Twist> >;
@@ -516,6 +563,22 @@ namespace boost
     extern template class RTT::Attribute< std::vector<KDL::Twist> >;
 #endif
 
+
+namespace boost
+{
+    namespace serialization
+    {
+        template<typename Archive>
+        void serialize(Archive& a, std::vector<KDL::Twist>& b, unsigned int version)
+        {
+            using boost::serialization::make_nvp;
+            for(unsigned int i=0; i < b.size(); i++){
+              boost::serialization::serialize(a, b[i], version);
+
+            }
+        }
+    }
+}
 #ifdef CORELIB_DATASOURCE_HPP
     extern template class RTT::internal::DataSource< std::vector<KDL::Wrench> >;
     extern template class RTT::internal::AssignableDataSource< std::vector<KDL::Wrench> >;
@@ -541,5 +604,21 @@ namespace boost
     extern template class RTT::Attribute< std::vector<KDL::Wrench> >;
 #endif
 
+
+namespace boost
+{
+    namespace serialization
+    {
+        template<typename Archive>
+        void serialize(Archive& a, std::vector<KDL::Wrench>& b, unsigned int version)
+        {
+            using boost::serialization::make_nvp;
+            for(unsigned int i=0; i < b.size(); i++){
+              boost::serialization::serialize(a, b[i], version);
+
+            }
+        }
+    }
+}
 #endif
 

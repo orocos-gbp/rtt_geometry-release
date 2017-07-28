@@ -1,12 +1,6 @@
-#ifndef ORO_KDL_CORBAKDLCONVERSION_HPP
-#define ORO_KDL_CORBAKDLCONVERSION_HPP 1
-
-#include <kdl_typekit/transports/corba/KDLTypesC.h>
+#include "KDLTypesC.h"
 #include <rtt/transports/corba/CorbaConversion.hpp>
 #include <kdl/frames.hpp>
-#include <kdl/jacobian.hpp>
-#include <kdl/jntarray.hpp>
-#include <Eigen/Dense>
 
 namespace RTT
 {
@@ -295,111 +289,6 @@ namespace RTT
             return true;
         }
     };
-    template<>
-    struct AnyConversion< KDL::Jacobian >
-    {
-        typedef KDL::Corba::DoubleSequence CorbaType;
-        typedef KDL::Jacobian StdType;
-      static CorbaType* toAny(const StdType& tp) {
-        CorbaType* cb = new CorbaType();
-        toCorbaType(*cb, tp);
-        return cb;
-      }
+  };//namespace corba
+};//namespace RTT
 
-      static bool update(const CORBA::Any& any, StdType& _value) {
-        CorbaType* result;
-        if ( any >>= result ) {
-          return toStdType(_value, *result);
-        }
-        return false;
-      }
-
-      static CORBA::Any_ptr createAny( const StdType& t ) {
-        CORBA::Any_ptr ret = new CORBA::Any();
-        *ret <<= toAny( t );
-        return ret;
-      }
-
-      static bool updateAny( StdType const& t, CORBA::Any& any ) {
-        any <<= toAny( t );
-        return true;
-      }
-
-      static bool toCorbaType(CorbaType& cb, const StdType& tp){
-        
-        size_t rows = static_cast<size_t>(tp.data.rows());
-        size_t cols = static_cast<size_t>(tp.data.cols());
-
-        cb.length( (CORBA::ULong)(tp.data.size() + 2) );
-
-        cb[0] = static_cast<double>(rows);
-        cb[1] = static_cast<double>(cols);
-        
-        Eigen::Map<Eigen::MatrixXd>(cb.get_buffer() + 2 , rows, cols) = tp.data;
-
-        return true;
-      }
-
-      static bool toStdType(StdType& tp, const CorbaType& cb){
-        if(cb.length() < 2){
-          return false;
-        }
-
-        size_t rows = static_cast<size_t>(cb[0]);
-        size_t cols = static_cast<size_t>(cb[1]);
-
-        tp.resize(cols);
-
-        tp.data = Eigen::MatrixXd::Map(cb.get_buffer()+2,rows,cols);
-        return true;
-      }
-
-    };
-
-    template<>
-    struct AnyConversion< KDL::JntArray >
-    {
-        typedef KDL::Corba::DoubleSequence CorbaType;
-        typedef KDL::JntArray StdType;
-
-      static CorbaType* toAny(const StdType& tp) {
-        CorbaType* cb = new CorbaType();
-        toCorbaType(*cb, tp);
-        return cb;
-      }
-
-      static bool update(const CORBA::Any& any, StdType& _value) {
-        CorbaType* result;
-        if ( any >>= result ) {
-          return toStdType(_value, *result);
-        }
-        return false;
-      }
-
-      static CORBA::Any_ptr createAny( const StdType& t ) {
-        CORBA::Any_ptr ret = new CORBA::Any();
-        *ret <<= toAny( t );
-        return ret;
-      }
-
-      static bool updateAny( StdType const& t, CORBA::Any& any ) {
-        any <<= toAny( t );
-        return true;
-      }
-
-      static bool toCorbaType(CorbaType& cb, const StdType& tp){
-        cb.length( (CORBA::ULong)(tp.rows() ));
-        Eigen::Map<Eigen::VectorXd>(cb.get_buffer() , cb.length()) = tp.data;
-        return true;
-      }
-    
-      static bool toStdType(StdType& tp, const CorbaType& cb){
-        tp.resize( cb.length() );
-        tp.data = Eigen::VectorXd::Map(cb.get_buffer() , cb.length());
-        return true;
-      }
-    };
-  } //namespace corba
-} //namespace RTT
-
-#endif // ORO_KDL_CORBAKDLCONVERSION_HPP

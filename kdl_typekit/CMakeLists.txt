@@ -8,12 +8,8 @@ find_package(OROCOS-RTT REQUIRED)
 include(${OROCOS-RTT_USE_FILE_PATH}/UseOROCOS-RTT.cmake)
 
 find_package(orocos_kdl REQUIRED)
+include_directories(${orocos_kdl_INCLUDE_DIRS})
 link_directories(${orocos_kdl_LIBRARY_DIRS})
-
-include_directories(
-  include/orocos
-  ${orocos_kdl_INCLUDE_DIRS}
-)
 
 # Define the way rotation properties get written to XML
 # Set one of the two options below to write them as EULER ZYX or RPY
@@ -42,7 +38,6 @@ orocos_typekit(${PROJECT_NAME}
 target_link_libraries(${PROJECT_NAME} ${orocos_kdl_LIBRARIES})
 
 add_subdirectory(src/corba)
-add_subdirectory(src/mqueue)
 
 if(CATKIN_ENABLE_TESTING)
   add_subdirectory(test)
@@ -55,9 +50,10 @@ if(catkin_FOUND)
   set(LUA_DESTINATION ${CATKIN_GLOBAL_SHARE_DESTINATION})
 endif()
 
-orocos_install_headers(
-  FILES include/orocos/${PROJECT_NAME}/typekit/Types.hpp
-  INSTALL include/orocos/${PROJECT_NAME}/typekit
+install(
+  FILES src/kdlTypekitTypes.hpp
+  DESTINATION include/orocos/kdl_typekit/typekit
+  RENAME Types.hpp
 )
 install(
   FILES ${LUA_FILES}

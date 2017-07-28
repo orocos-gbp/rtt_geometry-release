@@ -19,10 +19,10 @@
 // License along with this library; if not, write to the Free Software
 // Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-#include <kdl_typekit/transports/corba/corbatoolkit.hpp>
+#include "corbatoolkit.hpp"
 #include <rtt/types/Types.hpp>
 #include <rtt/transports/corba/CorbaTemplateProtocol.hpp>
-#include <kdl_typekit/transports/corba/CorbaKDLConversion.hpp>
+#include "CorbaKDLConversion.hpp"
 #include <rtt/types/TypekitPlugin.hpp>
 
 using namespace RTT;
@@ -46,10 +46,6 @@ namespace KDL
                     return ti->addProtocol(ORO_CORBA_PROTOCOL_ID, new CorbaTemplateProtocol< KDL::Wrench >() );
                 if ( name == "KDL.Twist" )
                     return ti->addProtocol(ORO_CORBA_PROTOCOL_ID, new CorbaTemplateProtocol< KDL::Twist >() );
-                if ( name == "KDL.Jacobian" )
-                    return ti->addProtocol(ORO_CORBA_PROTOCOL_ID, new CorbaTemplateProtocol< KDL::Jacobian >() );
-                if ( name == "KDL.JntArray" )
-                    return ti->addProtocol(ORO_CORBA_PROTOCOL_ID, new CorbaTemplateProtocol< KDL::JntArray >() );
                 return false;
             }
 
@@ -67,4 +63,3 @@ namespace KDL
 }
 
 ORO_TYPEKIT_PLUGIN( KDL::Corba::CorbaKDLPlugin)
-

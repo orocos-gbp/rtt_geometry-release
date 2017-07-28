@@ -28,6 +28,5 @@ namespace KDL{
   void loadRotationTypes(){
     RTT::types::Types()->addType( new KDLTypeInfo<Rotation>("KDL.Rotation") );
     RTT::types::Types()->addType( new SequenceTypeInfo<std::vector< Rotation > >("KDL.Rotation[]") );
-    RTT::types::Types()->addType( new CArrayTypeInfo<RTT::types::carray< Rotation > >("KDL.cRotation[]") );
-  }
+  };
 }  
