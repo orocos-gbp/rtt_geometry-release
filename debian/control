@@ -1,0 +1,12 @@
+Source: ros-indigo-rtt-geometry
+Section: misc
+Priority: extra
+Maintainer: Orocos Developers <orocos-dev@lists.mech.kuleuven.be>
+Build-Depends: debhelper (>= 9.0.0), ros-indigo-catkin
+Homepage: http://www.orocos.org/
+Standards-Version: 3.9.2
+
+Package: ros-indigo-rtt-geometry
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-indigo-eigen-typekit, ros-indigo-kdl-typekit
+Description: This metapackage contains tools for integrating the Orocos Kinematics and Dynamics Library (KDL) with the Orocos Toolchain and Real-Time Toolkit (RTT).
