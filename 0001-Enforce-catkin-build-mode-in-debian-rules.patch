@@ -1,4 +1,4 @@
-From 03bf349e70cdb1cd15f10d68b62d597f468dc97a Mon Sep 17 00:00:00 2001
+From 8ffb6ec88b7fd6d12e59931c3edbabe3bed545ab Mon Sep 17 00:00:00 2001
 From: Johannes Meyer <johannes@intermodalics.eu>
 Date: Fri, 28 Jul 2017 16:41:21 +0200
 Subject: [PATCH] Enforce catkin build mode in debian/rules
