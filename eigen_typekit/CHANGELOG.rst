@@ -2,6 +2,9 @@
 Changelog for package eigen_typekit
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.9.2 (2019-05-16)
+------------------
+
 2.9.1 (2017-07-28)
 ------------------
 * eigen_typekit: only find_package(cmake_modules) if EIGEN3 was not found
@@ -9,9 +12,8 @@ Changelog for package eigen_typekit
   ROS jade (see http://wiki.ros.org/jade/Migration#Eigen_CMake_Module_in_cmake_modules).
 * Contributors: Johannes Meyer
 
-2.9.0 (2017-05-17)
+2.9.0 (2017-05-05)
 ------------------
-* eigen_typekit: only find_package(cmake_modules) if EIGEN3 was not found
 * Fixed extra semicolon warnings when compiling in pedantic mode
 * Merge pull request `#24 <https://github.com/orocos/rtt_geometry/issues/24>`_ from meyerj/fix/eigen3-cmake into toolchain-2.9
 * Use FindEigen3.cmake config shipped with Eigen starting from version 3.3
