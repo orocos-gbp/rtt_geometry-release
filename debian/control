@@ -1,0 +1,12 @@
+Source: ros-lunar-kdl-typekit
+Section: misc
+Priority: extra
+Maintainer: Orocos Developers <orocos-dev@lists.mech.kuleuven.be>
+Build-Depends: debhelper (>= 9.0.0), ros-lunar-catkin, ros-lunar-ocl, ros-lunar-orocos-kdl, ros-lunar-rtt
+Homepage: http://ros.org/wiki/kdl_typekit
+Standards-Version: 3.9.2
+
+Package: ros-lunar-kdl-typekit
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-lunar-ocl, ros-lunar-orocos-kdl, ros-lunar-rtt
+Description: This package contains the KDL RTT bindings
