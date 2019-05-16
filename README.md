@@ -1,3 +1,29 @@
+## rtt_geometry (kinetic) - 2.9.2-1
+
+The packages in the `rtt_geometry` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release --rosdistro kinetic rtt_geometry` on `Thu, 16 May 2019 14:00:48 -0000`
+
+These packages were released:
+- `eigen_typekit`
+- `kdl_typekit`
+- `rtt_geometry`
+
+Version of package(s) in repository `rtt_geometry`:
+
+- upstream repository: https://github.com/orocos/rtt_geometry.git
+- release repository: https://github.com/orocos-gbp/rtt_geometry-release.git
+- rosdistro version: `2.9.1-0`
+- old version: `2.9.1-0`
+- new version: `2.9.2-1`
+
+Versions of tools used:
+
+- bloom version: `0.8.0`
+- catkin_pkg version: `0.4.12`
+- rosdep version: `0.15.1`
+- rosdistro version: `0.7.4`
+- vcstools version: `0.1.40`
+
+
 ## rtt_geometry (kinetic) - 2.9.0-0
 
 The packages in the `rtt_geometry` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release --rosdistro kinetic --track kinetic rtt_geometry` on `Fri, 05 May 2017 17:41:20 -0000`
