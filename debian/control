@@ -1,0 +1,12 @@
+Source: ros-kinetic-rtt-geometry
+Section: misc
+Priority: extra
+Maintainer: Orocos Developers <orocos-dev@lists.mech.kuleuven.be>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin
+Homepage: http://www.orocos.org/
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-rtt-geometry
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-eigen-typekit, ros-kinetic-kdl-typekit
+Description: This metapackage contains tools for integrating the Orocos Kinematics and Dynamics Library (KDL) with the Orocos Toolchain and Real-Time Toolkit (RTT).
