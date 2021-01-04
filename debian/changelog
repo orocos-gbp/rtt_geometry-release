@@ -1,0 +1,44 @@
+ros-noetic-rtt-geometry (2.9.4-2buster) buster; urgency=high
+
+
+
+ -- Orocos Developers <orocos-dev@lists.mech.kuleuven.be>  Sun, 03 Jan 2021 23:00:00 -0000
+
+ros-noetic-rtt-geometry (2.9.3-2buster) buster; urgency=high
+
+
+
+ -- Orocos Developers <orocos-dev@lists.mech.kuleuven.be>  Sun, 02 Jun 2019 22:00:00 -0000
+
+ros-noetic-rtt-geometry (2.9.2-2buster) buster; urgency=high
+
+
+
+ -- Orocos Developers <orocos-dev@lists.mech.kuleuven.be>  Wed, 15 May 2019 22:00:00 -0000
+
+ros-noetic-rtt-geometry (2.9.1-2buster) buster; urgency=high
+
+
+
+ -- Orocos Developers <orocos-dev@lists.mech.kuleuven.be>  Thu, 27 Jul 2017 22:00:00 -0000
+
+ros-noetic-rtt-geometry (2.9.0-2buster) buster; urgency=high
+
+  * Updated changelogs and bumped version number to 2.9.0
+  * Contributors: Johannes Meyer
+
+ -- Orocos Developers <orocos-dev@lists.mech.kuleuven.be>  Thu, 04 May 2017 22:00:00 -0000
+
+ros-noetic-rtt-geometry (2.8.1-2buster) buster; urgency=high
+
+
+
+ -- Orocos Developers <orocos-dev@lists.mech.kuleuven.be>  Mon, 20 Jul 2015 22:00:00 -0000
+
+ros-noetic-rtt-geometry (2.8.0-2buster) buster; urgency=high
+
+
+
+ -- Orocos Developers <orocos-dev@lists.mech.kuleuven.be>  Thu, 22 Jan 2015 23:00:00 -0000
+
+
